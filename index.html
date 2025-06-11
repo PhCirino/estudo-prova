@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Estudos Colégio Naval - Interativo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Seção de Autenticação -->
+    <div id="authSection" style="display: none;">
+        <div class="auth-buttons">
+            <button class="btn-auth-header" onclick="showLoginModal()">
+                <i class="fas fa-sign-in-alt"></i> Entrar
+            </button>
+            <button class="btn-auth-header" onclick="showRegisterModal()">
+                <i class="fas fa-user-plus"></i> Registrar
+            </button>
+        </div>
+    </div>
+
+    <!-- Seção do Usuário Logado -->
+    <div id="userSection" style="display: none;">
+        <div class="user-info">
+            <div class="user-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="user-details">
+                <h4 id="userName">Usuário</h4>
+                <p id="userLevel">Nível 1</p>
+                <p id="userXP">0 XP</p>
+            </div>
+        </div>
+        <div class="level-progress">
+            <div class="level-progress-bar">
+                <div id="levelProgressBar" style="width: 0%"></div>
+            </div>
+        </div>
+        <div class="user-actions">
+            <button class="btn-user btn-logout" onclick="authManager.logout()">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </button>
+        </div>
+    </div>
+
+    <header>
+        <h1>Plano de Estudos para o Colégio Naval</h1>
+        <p>Prepare-se para a prova do Colégio Naval com este guia completo e interativo!</p>
+    </header>
+
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#introducao" class="nav-link"><i class="fas fa-home"></i> Introdução</a></li>
+            <li><a href="#estrutura-prova" class="nav-link"><i class="fas fa-clipboard-list"></i> Estrutura da Prova</a></li>
+            <li><a href="#plano-anual" class="nav-link"><i class="fas fa-calendar-alt"></i> Plano de Estudos</a></li>
+            <li><a href="#materiais" class="nav-link"><i class="fas fa-book"></i> Materiais de Estudo</a></li>
+            <li><a href="#questionarios" class="nav-link"><i class="fas fa-question-circle"></i> Questionários</a></li>
+            <li><a href="#simulados" class="nav-link"><i class="fas fa-tasks"></i> Simulados</a></li>
+            <li><a href="#dicas-estudo" class="nav-link"><i class="fas fa-lightbulb"></i> Dicas de Estudo</a></li>
+            <li><a href="#recursos-adicionais" class="nav-link"><i class="fas fa-plus-circle"></i> Recursos</a></li>
+            <li><a href="#" class="nav-link performance-link" onclick="showPerformanceDashboard()"><i class="fas fa-chart-line"></i> Desempenho</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introducao">
+            <h2><i class="fas fa-info-circle"></i> Introdução</h2>
+            <p>Este plano de estudos foi elaborado com base nos conteúdos programáticos da prova do Colégio Naval. É importante adaptá-lo à sua rotina e necessidades individuais.</p>
+            <p>O <span class="highlight">Colégio Naval</span> equivale ao Ensino Médio regular e tem como objetivo preparar os jovens para compor o Corpo de Aspirantes da Escola Naval, instituição de ensino superior da Marinha do Brasil, localizada em Angra dos Reis (RJ).</p>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Tempo de Prova</h3>
+                    <p>2 dias consecutivos</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-question"></i>
+                    <h3>Total de Questões</h3>
+                    <p>92 questões + redação</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Disciplinas</h3>
+                    <p>5 matérias principais</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="estrutura-prova">
+            <h2><i class="fas fa-clipboard-list"></i> Estrutura da Prova</h2>
+            <p>A prova do Colégio Naval é composta por questões objetivas e redação, divididas em dois dias:</p>
+            
+            <div class="exam-structure">
+                <div class="exam-day">
+                    <h3><i class="fas fa-calendar-day"></i> 1º Dia</h3>
+                    <div class="subjects">
+                        <div class="subject-card math">
+                            <i class="fas fa-calculator"></i>
+                            <h4>Matemática</h4>
+                            <span class="questions">20 questões</span>
+                        </div>
+                        <div class="subject-card english">
+                            <i class="fas fa-globe"></i>
+                            <h4>Inglês</h4>
+                            <span class="questions">20 questões</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="exam-day">
+                    <h3><i class="fas fa-calendar-day"></i> 2º Dia</h3>
+                    <div class="subjects">
+                        <div class="subject-card portuguese">
+                            <i class="fas fa-pen"></i>
+                            <h4>Português</h4>
+                            <span class="questions">20 questões</span>
+                        </div>
+                        <div class="subject-card social">
+                            <i class="fas fa-globe-americas"></i>
+                            <h4>Estudos Sociais</h4>
+                            <span class="questions">12 questões</span>
+                        </div>
+                        <div class="subject-card science">
+                            <i class="fas fa-flask"></i>
+                            <h4>Ciências</h4>
+                            <span class="questions">18 questões</span>
+                        </div>
+                        <div class="subject-card essay">
+                            <i class="fas fa-edit"></i>
+                            <h4>Redação</h4>
+                            <span class="questions">Dissertativa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dicas-estudo">
+            <h2><i class="fas fa-lightbulb"></i> Dicas de Estudo</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Organização</h3>
+                    <p>Crie um cronograma de estudos realista, distribuindo as disciplinas ao longo da semana.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-redo"></i>
+                    <h3>Revisão Constante</h3>
+                    <p>Revise os conteúdos periodicamente para fixar o aprendizado.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Resolução de Questões</h3>
+                    <p>Pratique com provas anteriores e exercícios para se familiarizar com o estilo da prova.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h3>Redação</h3>
+                    <p>Treine a escrita regularmente, buscando feedback para aprimorar suas habilidades.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-bed"></i>
+                    <h3>Descanso</h3>
+                    <p>Reserve tempo para descanso e lazer, pois são essenciais para manter a saúde mental e física.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Alimentação e Exercícios</h3>
+                    <p>Mantenha uma alimentação saudável e pratique exercícios físicos para ter energia e disposição.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="plano-anual">
+            <h2><i class="fas fa-calendar-alt"></i> Plano de Estudos Anual</h2>
+            <p>Plano estruturado para preparação ao longo do ano, com links diretos para materiais e vídeos.</p>
+            
+            <div class="study-plan-controls">
+                <div class="plan-filters">
+                    <select id="weekFilter" onchange="filterStudyPlan()">
+                        <option value="">Todas as Semanas</option>
+                        <option value="1">Semana 1</option>
+                        <option value="2">Semana 2</option>
+                        <option value="3">Semana 3</option>
+                        <option value="4">Semana 4</option>
+                        <option value="5">Semana 5</option>
+                        <option value="6">Semana 6</option>
+                        <option value="7">Semana 7</option>
+                        <option value="8">Semana 8</option>
+                        <option value="9">Semana 9</option>
+                    </select>
+                    <select id="subjectPlanFilter" onchange="filterStudyPlan()">
+                        <option value="">Todas as Disciplinas</option>
+                        <option value="Matemática">Matemática</option>
+                        <option value="Português">Português</option>
+                        <option value="Estudos Sociais">Estudos Sociais</option>
+                        <option value="Ciências">Ciências</option>
+                        <option value="Inglês">Inglês</option>
+                        <option value="Geral">Geral</option>
+                    </select>
+                </div>
+                <div class="plan-progress">
+                    <div class="progress-info">
+                        <span id="planProgress">0% concluído</span>
+                        <div class="progress-bar">
+                            <div id="planProgressBar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="studyPlanContainer" class="study-plan-container">
+                <!-- Conteúdo será carregado dinamicamente pelo JavaScript -->
+            </div>
+        </section>
+
+        <section id="materiais">
+            <h2><i class="fas fa-book"></i> Materiais de Estudo</h2>
+            <p>Acesse materiais de estudo detalhados para cada disciplina:</p>
+            
+            <div class="materials-grid">
+                <div class="material-card math" onclick="showMaterial('math')">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Matemática</h3>
+                    <p>Aritmética, Álgebra, Geometria e Trigonometria</p>
+                    <button class="btn-study">Estudar <i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="material-card portuguese" onclick="showMaterial('portuguese')">
+                    <i class="fas fa-pen"></i>
+                    <h3>Português</h3>
+                    <p>Gramática, Interpretação de Textos e Redação</p>
+                    <button class="btn-study">Estudar <i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="material-card social" onclick="showMaterial('social')">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>Estudos Sociais</h3>
+                    <p>Geografia e História do Brasil</p>
+                    <button class="btn-study">Estudar <i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="material-card science" onclick="showMaterial('science')">
+                    <i class="fas fa-flask"></i>
+                    <h3>Ciências</h3>
+                    <p>Química, Física e Biologia</p>
+                    <button class="btn-study">Estudar <i class="fas fa-arrow-right"></i></button>
+                </div>
+                
+                <div class="material-card english" onclick="showMaterial('english')">
+                    <i class="fas fa-globe"></i>
+                    <h3>Inglês</h3>
+                    <p>Gramática e Compreensão de Textos</p>
+                    <button class="btn-study">Estudar <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="questionarios">
+            <h2><i class="fas fa-question-circle"></i> Questionários</h2>
+            <p>Teste seus conhecimentos com questionários por disciplina:</p>
+            
+            <div class="quiz-grid">
+                <div class="quiz-card math" onclick="startQuiz('math')">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Quiz de Matemática</h3>
+                    <p>10 questões sobre aritmética, álgebra e geometria</p>
+                    <button class="btn-quiz">Iniciar Quiz <i class="fas fa-play"></i></button>
+                </div>
+                
+                <div class="quiz-card portuguese" onclick="startQuiz('portuguese')">
+                    <i class="fas fa-pen"></i>
+                    <h3>Quiz de Português</h3>
+                    <p>10 questões sobre gramática e interpretação</p>
+                    <button class="btn-quiz">Iniciar Quiz <i class="fas fa-play"></i></button>
+                </div>
+                
+                <div class="quiz-card social" onclick="startQuiz('social')">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>Quiz de Estudos Sociais</h3>
+                    <p>10 questões sobre geografia e história</p>
+                    <button class="btn-quiz">Iniciar Quiz <i class="fas fa-play"></i></button>
+                </div>
+                
+                <div class="quiz-card science" onclick="startQuiz('science')">
+                    <i class="fas fa-flask"></i>
+                    <h3>Quiz de Ciências</h3>
+                    <p>10 questões sobre química, física e biologia</p>
+                    <button class="btn-quiz">Iniciar Quiz <i class="fas fa-play"></i></button>
+                </div>
+                
+                <div class="quiz-card english" onclick="startQuiz('english')">
+                    <i class="fas fa-globe"></i>
+                    <h3>Quiz de Inglês</h3>
+                    <p>10 questões sobre gramática e vocabulário</p>
+                    <button class="btn-quiz">Iniciar Quiz <i class="fas fa-play"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="simulados">
+            <h2><i class="fas fa-tasks"></i> Simulados</h2>
+            <p>Faça simulados completos para testar sua preparação:</p>
+            
+            <div class="simulation-grid">
+                <div class="simulation-card" onclick="startSimulation('complete')">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Simulado Completo</h3>
+                    <p>92 questões + redação (todas as disciplinas)</p>
+                    <div class="simulation-info">
+                        <span><i class="fas fa-clock"></i> 4 horas</span>
+                        <span><i class="fas fa-question"></i> 92 questões</span>
+                    </div>
+                    <button class="btn-simulation">Iniciar Simulado <i class="fas fa-rocket"></i></button>
+                </div>
+                
+                <div class="simulation-card" onclick="startSimulation('day1')">
+                    <i class="fas fa-calendar-day"></i>
+                    <h3>Simulado 1º Dia</h3>
+                    <p>Matemática e Inglês</p>
+                    <div class="simulation-info">
+                        <span><i class="fas fa-clock"></i> 2 horas</span>
+                        <span><i class="fas fa-question"></i> 40 questões</span>
+                    </div>
+                    <button class="btn-simulation">Iniciar Simulado <i class="fas fa-rocket"></i></button>
+                </div>
+                
+                <div class="simulation-card" onclick="startSimulation('day2')">
+                    <i class="fas fa-calendar-day"></i>
+                    <h3>Simulado 2º Dia</h3>
+                    <p>Português, Estudos Sociais, Ciências + Redação</p>
+                    <div class="simulation-info">
+                        <span><i class="fas fa-clock"></i> 3 horas</span>
+                        <span><i class="fas fa-question"></i> 50 questões + redação</span>
+                    </div>
+                    <button class="btn-simulation">Iniciar Simulado <i class="fas fa-rocket"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="recursos-adicionais">
+            <h2><i class="fas fa-plus-circle"></i> Recursos Adicionais</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Provas Anteriores</h3>
+                    <p>Resolva provas de anos anteriores para simular o ambiente do exame.</p>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Livros Didáticos</h3>
+                    <p>Utilize livros didáticos de ensino médio para aprofundar os conhecimentos.</p>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Videoaulas</h3>
+                    <p>Complemente seus estudos com videoaulas e cursos preparatórios.</p>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Grupos de Estudo</h3>
+                    <p>Participe de grupos de estudo para trocar conhecimentos.</p>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Acompanhamento</h3>
+                    <p>Monitore seu progresso com estatísticas detalhadas.</p>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-running"></i>
+                    <h3>Preparação Física</h3>
+                    <p>Prepare-se também para o Teste de Aptidão Física.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para Materiais de Estudo -->
+    <div id="materialModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMaterial()">&times;</span>
+            <div id="materialContent">
+                <!-- Conteúdo será carregado dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Quiz -->
+    <div id="quizModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuiz()">&times;</span>
+            <div id="quizContent">
+                <!-- Conteúdo será carregado dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Simulado -->
+    <div id="simulationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSimulation()">&times;</span>
+            <div id="simulationContent">
+                <!-- Conteúdo será carregado dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Seção Admin (apenas para administradores) -->
+    <div id="adminSection" style="display: none;">
+        <div class="admin-header">
+            <h2><i class="fas fa-users-cog"></i> Painel Administrativo</h2>
+            <button class="btn-admin" onclick="showCreateStudentModal()">
+                <i class="fas fa-user-plus"></i> Adicionar Estudante
+            </button>
+        </div>
+        <div id="studentsContainer" class="students-grid">
+            <!-- Estudantes serão carregados aqui -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Plano de Estudos Colégio Naval. Todos os direitos reservados.</p>
+        <p>Boa sorte nos seus estudos! <i class="fas fa-anchor"></i></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
+

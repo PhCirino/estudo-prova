@@ -1,0 +1,201 @@
+[
+    {
+        "week": 1,
+        "theme": "Fundamentos da Matemática e Português",
+        "topics": [
+            {
+                "subject": "Matemática",
+                "topic": "Aritmética Básica",
+                "materials": [
+                    {"type": "text", "title": "Numeração e Operações Fundamentais", "link": "#matematica-aritmetica-numeracao"},
+                    {"type": "video", "title": "Introdução à Aritmética", "id": "aritmetica_basica_video1"}
+                ]
+            },
+            {
+                "subject": "Português",
+                "topic": "Fonética e Fonologia",
+                "materials": [
+                    {"type": "text", "title": "Fonemas e Encontros Vocálicos", "link": "#portugues-gramatica-fonetica"},
+                    {"type": "video", "title": "Acentuação Gráfica", "id": "portugues_gramatica_video1"}
+                ]
+            }
+        ]
+    },
+    {
+        "week": 2,
+        "theme": "Álgebra e Classes de Palavras",
+        "topics": [
+            {
+                "subject": "Matemática",
+                "topic": "Conjuntos Numéricos e Expressões Algébricas",
+                "materials": [
+                    {"type": "text", "title": "Conjuntos Numéricos", "link": "#matematica-algebra-conjuntos"},
+                    {"type": "video", "title": "Expressões Algébricas", "id": "algebra_expressoes_video1"}
+                ]
+            },
+            {
+                "subject": "Português",
+                "topic": "Classes de Palavras I (Substantivo, Artigo, Adjetivo)",
+                "materials": [
+                    {"type": "text", "title": "Substantivo e Artigo", "link": "#portugues-gramatica-substantivo"},
+                    {"type": "video", "title": "Adjetivo e suas Flexões", "id": "portugues_gramatica_video2"}
+                ]
+            }
+        ]
+    },
+    {
+        "week": 3,
+        "theme": "Equações e Verbos",
+        "topics": [
+            {
+                "subject": "Matemática",
+                "topic": "Equações do 1º e 2º Grau",
+                "materials": [
+                    {"type": "text", "title": "Equações do 1º Grau", "link": "#matematica-algebra-equacao1"},
+                    {"type": "video", "title": "Fórmula de Bhaskara", "id": "algebra_equacao2_video1"}
+                ]
+            },
+            {
+                "subject": "Português",
+                "topic": "Verbos e Advérbios",
+                "materials": [
+                    {"type": "text", "title": "Verbos: Tempos e Modos", "link": "#portugues-gramatica-verbo"},
+                    {"type": "video", "title": "Advérbios e Locuções Adverbiais", "id": "portugues_gramatica_video3"}
+                ]
+            }
+        ]
+    },
+    {
+        "week": 4,
+        "theme": "Geometria Plana e Sintaxe",
+        "topics": [
+            {
+                "subject": "Matemática",
+                "topic": "Geometria Plana: Triângulos e Quadriláteros",
+                "materials": [
+                    {"type": "text", "title": "Conceitos Primitivos e Ângulos", "link": "#matematica-geometria-conceitos"},
+                    {"type": "video", "title": "Áreas de Figuras Planas", "id": "geometria_plana_video1"}
+                ]
+            },
+            {
+                "subject": "Português",
+                "topic": "Sintaxe: Frase, Oração, Período e Termos Essenciais",
+                "materials": [
+                    {"type": "text", "title": "Frase, Oração e Período", "link": "#portugues-sintaxe-frase"},
+                    {"type": "video", "title": "Sujeito e Predicado", "id": "portugues_sintaxe_video1"}
+                ]
+            }
+        ]
+    },
+    {
+        "week": 5,
+        "theme": "Trigonometria e Interpretação de Textos",
+        "topics": [
+            {
+                "subject": "Matemática",
+                "topic": "Trigonometria no Triângulo Retângulo",
+                "materials": [
+                    {"type": "text", "title": "Razões Trigonométricas", "link": "#matematica-trigonometria-razoes"},
+                    {"type": "video", "title": "Ângulos Notáveis", "id": "trigonometria_video1"}
+                ]
+            },
+            {
+                "subject": "Português",
+                "topic": "Interpretação de Textos: Estratégias e Tipologias",
+                "materials": [
+                    {"type": "text", "title": "Estratégias de Leitura", "link": "#portugues-interpretacao-estrategias"},
+                    {"type": "video", "title": "Tipologia Textual", "id": "portugues_interpretacao_video1"}
+                ]
+            }
+        ]
+    },
+    {
+        "week": 6,
+        "theme": "Estudos Sociais (Geografia e História)",
+        "topics": [
+            {
+                "subject": "Estudos Sociais",
+                "topic": "Geografia do Brasil: Aspectos Físicos",
+                "materials": [
+                    {"type": "text", "title": "Relevo, Clima e Vegetação", "link": "#estudos-sociais-geografia-relevo"},
+                    {"type": "video", "title": "Hidrografia Brasileira", "id": "geografia_brasil_video1"}
+                ]
+            },
+            {
+                "subject": "Estudos Sociais",
+                "topic": "História do Brasil: Período Colonial",
+                "materials": [
+                    {"type": "text", "title": "Chegada dos Portugueses e Período Pré-Colonial", "link": "#estudos-sociais-historia-colonial"},
+                    {"type": "video", "title": "Ciclo do Açúcar", "id": "historia_brasil_video1"}
+                ]
+            }
+        ]
+    },
+    {
+        "week": 7,
+        "theme": "Ciências (Química e Física)",
+        "topics": [
+            {
+                "subject": "Ciências",
+                "topic": "Química: Estrutura da Matéria e Ligações Químicas",
+                "materials": [
+                    {"type": "text", "title": "Átomos e Moléculas", "link": "#ciencias-quimica-estrutura"},
+                    {"type": "video", "title": "Ligações Iônicas e Covalentes", "id": "quimica_ligacoes_video1"}
+                ]
+            },
+            {
+                "subject": "Ciências",
+                "topic": "Física: Cinemática e Dinâmica",
+                "materials": [
+                    {"type": "text", "title": "Movimento Retilíneo Uniforme", "link": "#ciencias-fisica-cinematica"},
+                    {"type": "video", "title": "Leis de Newton", "id": "fisica_dinamica_video1"}
+                ]
+            }
+        ]
+    },
+    {
+        "week": 8,
+        "theme": "Ciências (Biologia) e Inglês",
+        "topics": [
+            {
+                "subject": "Ciências",
+                "topic": "Biologia: Citologia e Genética Básica",
+                "materials": [
+                    {"type": "text", "title": "Célula: Estrutura e Funções", "link": "#ciencias-biologia-citologia"},
+                    {"type": "video", "title": "DNA e RNA", "id": "biologia_genetica_video1"}
+                ]
+            },
+            {
+                "subject": "Inglês",
+                "topic": "Gramática Básica e Vocabulário",
+                "materials": [
+                    {"type": "text", "title": "Verbo To Be e Pronomes", "link": "#ingles-gramatica-verb"},
+                    {"type": "video", "title": "Tempos Verbais Simples", "id": "ingles_gramatica_video1"}
+                ]
+            }
+        ]
+    },
+    {
+        "week": 9,
+        "theme": "Revisão Geral e Simulados",
+        "topics": [
+            {
+                "subject": "Geral",
+                "topic": "Revisão de Conteúdos Chave",
+                "materials": [
+                    {"type": "text", "title": "Resumo de Matemática", "link": "#matematica-resumo"},
+                    {"type": "text", "title": "Resumo de Português", "link": "#portugues-resumo"}
+                ]
+            },
+            {
+                "subject": "Geral",
+                "topic": "Simulados e Resolução de Provas Anteriores",
+                "materials": [
+                    {"type": "quiz", "title": "Simulado Completo Colégio Naval", "id": "simulado_completo"},
+                    {"type": "video", "title": "Resolução de Prova Anterior", "id": "simulado_resolucao_video1"}
+                ]
+            }
+        ]
+    }
+]
+

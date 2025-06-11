@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "question": "Qual o resultado de 15 + 23?",
+        "options": [
+            "38",
+            "37",
+            "39",
+            "40"
+        ],
+        "answer": "38",
+        "subject": "Matemática"
+    },
+    {
+        "id": 2,
+        "question": "Qual a capital do Brasil?",
+        "options": [
+            "Rio de Janeiro",
+            "São Paulo",
+            "Brasília",
+            "Belo Horizonte"
+        ],
+        "answer": "Brasília",
+        "subject": "Estudos Sociais"
+    },
+    {
+        "id": 3,
+        "question": "Qual o antônimo de 'bom'?",
+        "options": [
+            "ótimo",
+            "mau",
+            "excelente",
+            "perfeito"
+        ],
+        "answer": "mau",
+        "subject": "Português"
+    },
+    {
+        "id": 4,
+        "question": "Qual o símbolo químico da água?",
+        "options": [
+            "O2",
+            "CO2",
+            "H2O",
+            "N2"
+        ],
+        "answer": "H2O",
+        "subject": "Ciências"
+    },
+    {
+        "id": 5,
+        "question": "Translate 'hello' to Portuguese.",
+        "options": [
+            "olá",
+            "adeus",
+            "obrigado",
+            "por favor"
+        ],
+        "answer": "olá",
+        "subject": "Inglês"
+    }
+]
+
