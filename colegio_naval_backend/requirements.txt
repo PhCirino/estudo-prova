@@ -85,5 +85,5 @@ xhtml2pdf==0.2.17
 zopfli==0.2.3.post1
 
 Flask-Cors==4.0.1
-
+flask_sqlalchemy
 
